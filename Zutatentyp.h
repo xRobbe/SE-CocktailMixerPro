@@ -10,23 +10,23 @@ class Zutatentyp
 	
 public:
 	//
-	long int getMenge();
+	int getMenge();
 	//
-	void getTyp();
+	int getTyp();
 	//
-	long double getZeit();
+	int getZeit();
 	//
-	Zutatentyp(std::string sZutat);
+	Zutatentyp(int typ);
 	
 private:
 	//
-	long double dZeit;
+	int zeit;
 	
 	//
-	long int iMenge;
+	int menge;
 	
 	//
-	std::string sTyp;
+        int typ;
 	
 	
 };

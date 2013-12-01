@@ -13,7 +13,7 @@ public:
 	//
 	Dosierer(std::string sZutat);
 	//
-	void getInhalt();
+	std::string getInhalt();
 	//
 	Zutatentyp * getTyp();
 	

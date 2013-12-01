@@ -3,20 +3,29 @@
 
 #include "Dosierer.h"
 //
-void Dosierer::getInhalt()
-{
-	
+
+std::string Dosierer::getInhalt() {
+    return sInhalt;
 }
 
 //
-Dosierer::Dosierer(std::string sZutat)
-{
-	
+
+Dosierer::Dosierer(std::string sZutat) {
+    sInhalt = sZutat;
+    if (sZutat == "Eis") {
+        typ = new Zutatentyp(0);
+        return;
+    }
+    if (sZutat == "Limettenstuecke") {
+        typ = new Zutatentyp(1);
+        return;
+    }
+    typ = new Zutatentyp(2);
 }
 
 //
-Zutatentyp * Dosierer::getTyp()
-{
-	return 0;
+
+Zutatentyp * Dosierer::getTyp() {
+    return typ;
 }
 

@@ -10,31 +10,23 @@
 #include "VerfRezeptbuch.h"
 #include "Dosierer.h"
 #include "vector"
+#include "error.h"
+#include "iostream"
 //Steuert den Ablauf des Rezeptes. Ließt das Rezept aus dem VerfRezeptbuch.
 class RezepturProzessor
 {
-	//
+private:
 	std::vector<Dosierer *> dosierer;
-	
-	//
 	Entleerer * entleerer;
-	
-	//
 	long int * iTimerMulti;
-	
-	//
 	Mischer * mischer;
-	
-	//
 	Stampfer * stampfer;
-	
-	//
 	VerfRezeptbuch * vrBuch;
-	
-	//
 	Waage * waage;
-	
-	
+public:
+    RezepturProzessor();
+    void createDosierer(std::string FileName );
+    void debug();
 };
 
 #endif
