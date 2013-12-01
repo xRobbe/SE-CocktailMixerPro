@@ -3,7 +3,7 @@
 #ifndef VERFREZEPTBUCH_H_H
 #define VERFREZEPTBUCH_H_H
 
-#include "Rezeptbuch.h"
+#include "code/Rezeptbuch/Rezeptbuch.h"
 //
 class VerfRezeptbuch: public Rezeptbuch
 {

@@ -2,7 +2,7 @@
 // Programm zum Testen der Methodenaufrufe des Rezeptbuchs aus dem SWE Praktikum im WS 2013 
 // Ralf Hahn,  04.10.2013
 
-#include "Rezeptbuch.h"
+#include "VerfRezeptbuch.h"
 
 #include <iostream>
 using namespace std; 
@@ -14,7 +14,7 @@ int main()
 int i=0;
 
 // das Rezeptbuch anlegen
-Rezeptbuch* MyRezeptbuch = new Rezeptbuch;
+VerfRezeptbuch* MyRezeptbuch = new VerfRezeptbuch();
 
 
 // Rezeptliste ausgeben

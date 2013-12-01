@@ -13,11 +13,11 @@
  */
 
 
-                         
-                         
+#ifndef _REZEPTBUCH_H_489
+#define _REZEPTBUCH_H_489
 
-               
-                 
+#include <list>
+#include <string>
 
 using namespace std;
 
@@ -122,4 +122,4 @@ class Rezeptbuch
 
 };
 
-      
+#endif

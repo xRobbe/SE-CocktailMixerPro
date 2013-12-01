@@ -2,6 +2,7 @@
 
 
 #include "Zutatentyp.h"
+#include "string"
 //
 long int Zutatentyp::getMenge()
 {

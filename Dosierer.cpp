@@ -2,7 +2,6 @@
 
 
 #include "Dosierer.h"
-#include "string"
 //
 void Dosierer::getInhalt()
 {
