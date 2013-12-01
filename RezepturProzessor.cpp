@@ -7,6 +7,8 @@
 
 RezepturProzessor::RezepturProzessor() {
     createDosierer("zutaten.txt");
+    vrBuch = new VerfRezeptbuch(dosierer);
+
 }
 
 void RezepturProzessor::createDosierer(std::string fileName) {
@@ -29,16 +31,26 @@ void RezepturProzessor::createDosierer(std::string fileName) {
 }
 
 void RezepturProzessor::debug() {
-    for (int i = 0; i < dosierer.size(); ++i) {
-        std::cout << "Inhalt: " << dosierer.at(i)->getInhalt() << std::endl;
+    cout << vrBuch->getAnzahlRezepte() << endl;
+    for (int i = 0; i < vrBuch->getAnzahlRezepte(); i++) {
+        Rezept* r = vrBuch->getRezept(i);
+        cout << i << ". " << r->getName() << endl;
+//        for(int j = 0; j < r->getAnzahlRezeptschritte(); ++j) {
+//            cout << "* " << j << r->getRezeptSchritt(j)->getZutat() << endl;
+//        }
+//        cout << endl;
     }
-    std::cout << std::endl;
-    std::cout << std::endl;
-    std::cout << std::endl;
-    for (int i = 0; i < dosierer.size(); ++i) {
-        std::cout << "Typ: " << dosierer.at(i)->getTyp()->getTyp() << std::endl;
-        std::cout << "Zeit: " << dosierer.at(i)->getTyp()->getZeit() << std::endl;
-        std::cout << "Menge: " << dosierer.at(i)->getTyp()->getMenge() << std::endl;
-        std::cout << std::endl;
-    }
+
+//        for (int i = 0; i < dosierer.size(); ++i) {
+//            std::cout << "Inhalt: " << dosierer.at(i)->getInhalt() << std::endl;
+//        }
+    //    std::cout << std::endl;
+    //    std::cout << std::endl;
+    //    std::cout << std::endl;
+    //    for (int i = 0; i < dosierer.size(); ++i) {
+    //        std::cout << "Typ: " << dosierer.at(i)->getTyp()->getTyp() << std::endl;
+    //        std::cout << "Zeit: " << dosierer.at(i)->getTyp()->getZeit() << std::endl;
+    //        std::cout << "Menge: " << dosierer.at(i)->getTyp()->getMenge() << std::endl;
+    //        std::cout << std::endl;
+    //    }
 }

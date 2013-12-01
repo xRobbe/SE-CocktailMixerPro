@@ -11,9 +11,15 @@
 using namespace std;
 
 int main() {
+    try{
     RezepturProzessor rp = RezepturProzessor();
+    cout << "***********************************" << endl;
     rp.debug();
     
 
     return 0;
+    } catch (exception e) {
+        std::cerr << e.what() << std::endl;
+        return 1;
+    }
 }
