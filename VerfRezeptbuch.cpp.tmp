@@ -1,0 +1,16 @@
+//@(#) VerfRezeptbuch.cpp
+
+
+                           
+//
+VerfRezeptbuch::~VerfRezeptbuch()
+{
+	
+}
+
+//
+VerfRezeptbuch::VerfRezeptbuch()
+{
+	
+}
+

@@ -4,7 +4,15 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>Dosierer.h</itemPath>
+      <itemPath>Entleerer.h</itemPath>
+      <itemPath>Mischer.h</itemPath>
       <itemPath>Rezeptbuch.h</itemPath>
+      <itemPath>RezepturProzessor.h</itemPath>
+      <itemPath>Stampfer.h</itemPath>
+      <itemPath>VerfRezeptbuch.h</itemPath>
+      <itemPath>Waage.h</itemPath>
+      <itemPath>Zutatentyp.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -14,6 +22,14 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>Dosierer.cpp</itemPath>
+      <itemPath>Entleerer.cpp</itemPath>
+      <itemPath>Mischer.cpp</itemPath>
+      <itemPath>RezepturProzessor.cpp</itemPath>
+      <itemPath>Stampfer.cpp</itemPath>
+      <itemPath>VerfRezeptbuch.cpp</itemPath>
+      <itemPath>Waage.cpp</itemPath>
+      <itemPath>Zutatentyp.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -38,9 +54,41 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="Dosierer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Dosierer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Entleerer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Entleerer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Mischer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Mischer.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Rezeptbuch.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Rezeptbuch_CASE_G++_Ubuntu.o" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RezepturProzessor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RezepturProzessor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Stampfer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Stampfer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="VerfRezeptbuch.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="VerfRezeptbuch.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Waage.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Waage.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Zutatentyp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Zutatentyp.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -65,9 +113,41 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="Dosierer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Dosierer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Entleerer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Entleerer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Mischer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Mischer.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Rezeptbuch.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Rezeptbuch_CASE_G++_Ubuntu.o" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RezepturProzessor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RezepturProzessor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Stampfer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Stampfer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="VerfRezeptbuch.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="VerfRezeptbuch.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Waage.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Waage.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Zutatentyp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Zutatentyp.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>

@@ -1,0 +1,30 @@
+//@(#) Dosierer.h
+
+                    
+                    
+
+                       
+                 
+//Dosiert die Menge einer Zutat
+class Dosierer
+{
+	
+public:
+	//
+	Dosierer(std::string sZutat);
+	//
+	void getInhalt();
+	//
+	Zutatentyp * getTyp();
+	
+private:
+	//
+	std::string sInhalt;
+	
+	//
+	Zutatentyp * typ;
+	
+	
+};
+
+      

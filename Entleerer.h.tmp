@@ -1,0 +1,23 @@
+//@(#) Entleerer.h
+
+                     
+                     
+
+//Entleert den Inhalt der Mischschüssel
+class Entleerer
+{
+	
+public:
+	//
+	Entleerer();
+	//
+	void setOffen(bool bOffen);
+	
+private:
+	//
+	bool bOffen;
+	
+	
+};
+
+      

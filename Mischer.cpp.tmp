@@ -1,0 +1,16 @@
+//@(#) Mischer.cpp
+
+
+                    
+//
+void Mischer::setAktiv(bool bAktiv)
+{
+	
+}
+
+//
+Mischer::Mischer()
+{
+	
+}
+

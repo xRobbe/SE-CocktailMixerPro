@@ -1,0 +1,23 @@
+//@(#) Mischer.h
+
+                   
+                   
+
+//Mischt den Inhalt der Mischschüssel
+class Mischer
+{
+	
+public:
+	//
+	Mischer();
+	//
+	void setAktiv(bool bAktiv);
+	
+private:
+	//
+	bool bAktiv;
+	
+	
+};
+
+      

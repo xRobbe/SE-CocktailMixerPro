@@ -1,0 +1,23 @@
+//@(#) Stampfer.h
+
+                    
+                    
+
+//Stampft den Inhalt der Mischschüssel
+class Stampfer
+{
+	
+public:
+	//
+	void setAktiv(bool bAktiv);
+	//
+	Stampfer();
+	
+private:
+	//
+	bool bAktiv;
+	
+	
+};
+
+      

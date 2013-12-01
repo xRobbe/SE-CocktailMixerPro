@@ -1,0 +1,30 @@
+//@(#) Waage.h
+
+                 
+                 
+
+//Wiegt den Inhalt der Mischschüssel
+class Waage
+{
+	
+public:
+	//
+	long int getDeltaGewich();
+	//
+	long int getGewicht();
+	//
+	void setGewicht(long int gewicht);
+	//
+	Waage();
+	
+private:
+	//
+	long int iGewicht;
+	
+	//
+	long int iGewichtDelta;
+	
+	
+};
+
+      

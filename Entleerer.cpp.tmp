@@ -1,0 +1,16 @@
+//@(#) Entleerer.cpp
+
+
+                      
+//
+void Entleerer::setOffen(bool bOffen)
+{
+	
+}
+
+//
+Entleerer::Entleerer()
+{
+	
+}
+
