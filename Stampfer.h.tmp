@@ -1,0 +1,25 @@
+
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Stampfer.h" 0
+//@(#) Stampfer.h
+
+                    
+                    
+
+//Stampft den Inhalt der Mischschüssel
+class Stampfer
+{
+	
+public:
+	//
+	void setAktiv(bool bAktiv);
+	//
+	Stampfer();
+	
+private:
+	//
+	bool bAktiv;
+	
+	
+};
+
+      

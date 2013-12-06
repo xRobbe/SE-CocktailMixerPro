@@ -1,0 +1,63 @@
+
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Waage.cpp" 0
+//@(#) Waage.cpp
+
+
+                 
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Waage.h" 0
+//@(#) Waage.h
+
+                 
+                 
+
+//Wiegt den Inhalt der Mischschüssel
+class Waage
+{
+	
+public:
+	//
+	long int getDeltaGewich();
+	//
+	long int getGewicht();
+	//
+	void setGewicht(long int gewicht);
+	//
+	Waage();
+	
+private:
+	//
+	long int iGewicht;
+	
+	//
+	long int iGewichtDelta;
+	
+	
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Waage.cpp" 4
+//
+long int Waage::getDeltaGewich()
+{
+	return 0;
+}
+
+//
+void Waage::setGewicht(long int gewicht)
+{
+	
+}
+
+//
+long int Waage::getGewicht()
+{
+	return 0;
+}
+
+//
+Waage::Waage()
+{
+	
+}
+

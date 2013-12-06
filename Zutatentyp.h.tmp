@@ -1,9 +1,11 @@
+
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Zutatentyp.h" 0
 //@(#) Zutatentyp.h
 
-#ifndef ZUTATENTYP_H_H
-#define ZUTATENTYP_H_H
+                      
+                      
 
-#include "string"
+                
 //
 class Zutatentyp
 {
@@ -31,4 +33,4 @@ private:
 	
 };
 
-#endif
+      

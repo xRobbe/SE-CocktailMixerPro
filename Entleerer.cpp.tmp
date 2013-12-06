@@ -1,0 +1,44 @@
+
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Entleerer.cpp" 0
+//@(#) Entleerer.cpp
+
+
+                     
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Entleerer.h" 0
+//@(#) Entleerer.h
+
+                     
+                     
+
+//Entleert den Inhalt der Mischschüssel
+class Entleerer
+{
+	
+public:
+	//
+	Entleerer();
+	//
+	void setOffen(bool bOffen);
+	
+private:
+	//
+	bool bOffen;
+	
+	
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Entleerer.cpp" 4
+//
+void Entleerer::setOffen(bool bOffen)
+{
+	
+}
+
+//
+Entleerer::Entleerer()
+{
+	
+}
+

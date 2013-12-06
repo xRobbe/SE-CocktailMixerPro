@@ -1,0 +1,88 @@
+
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Zutatentyp.cpp" 0
+//@(#) Zutatentyp.cpp
+
+
+                      
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Zutatentyp.h" 0
+//@(#) Zutatentyp.h
+
+                      
+                      
+
+                
+//
+class Zutatentyp
+{
+	
+public:
+	//
+	int getMenge();
+	//
+	int getTyp();
+	//
+	int getZeit();
+	//
+	Zutatentyp(int typ);
+	
+private:
+	//
+	int zeit;
+	
+	//
+	int menge;
+	
+	//
+	int typ;
+	
+	
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Zutatentyp.cpp" 4
+                
+//
+
+//
+int Zutatentyp::getMenge() {
+    return menge;
+}
+
+//
+
+//
+int Zutatentyp::getTyp() {
+    return typ;
+}
+
+//
+
+//
+Zutatentyp::Zutatentyp(int typ) {
+    switch (typ) {
+            //Eis
+        case 0:
+            menge = 20;
+            zeit = 1000;
+            break;
+            //Limettenstücke
+        case 1:
+            menge = 10;
+            zeit = 1000;
+            break;
+            //Alles andere
+        case 2:
+            menge = 1;
+            zeit = 250;
+            break;
+    }
+}
+
+//
+
+//
+int Zutatentyp::getZeit() {
+    return zeit;
+}
+

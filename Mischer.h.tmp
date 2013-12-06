@@ -1,0 +1,25 @@
+
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Mischer.h" 0
+//@(#) Mischer.h
+
+                   
+                   
+
+//Mischt den Inhalt der Mischschüssel
+class Mischer
+{
+	
+public:
+	//
+	Mischer();
+	//
+	void setAktiv(bool bAktiv);
+	
+private:
+	//
+	bool bAktiv;
+	
+	
+};
+
+      

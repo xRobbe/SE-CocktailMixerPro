@@ -1,0 +1,107 @@
+
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Dosierer.cpp" 0
+//@(#) Dosierer.cpp
+
+
+                    
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Dosierer.h" 0
+//@(#) Dosierer.h
+
+                    
+                    
+
+
+                  
+                
+                      
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Zutatentyp.h" 0
+//@(#) Zutatentyp.h
+
+                      
+                      
+
+                
+//
+class Zutatentyp
+{
+	
+public:
+	//
+	int getMenge();
+	//
+	int getTyp();
+	//
+	int getZeit();
+	//
+	Zutatentyp(int typ);
+	
+private:
+	//
+	int zeit;
+	
+	//
+	int menge;
+	
+	//
+	int typ;
+	
+	
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Dosierer.h" 12
+//Dosiert die Menge einer Zutat
+class Dosierer
+{
+	
+public:
+	//
+	Dosierer(std::string sZutat);
+	//
+	std::string getInhalt();
+	//
+	Zutatentyp * getTyp();
+	
+private:
+	//
+	std::string sInhalt;
+	
+	//
+	Zutatentyp * typ;
+	
+	
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Dosierer.cpp" 4
+//
+
+//
+std::string Dosierer::getInhalt() {
+    return sInhalt;
+}
+
+//
+
+//
+Dosierer::Dosierer(std::string sZutat) {
+    sInhalt = sZutat;
+    if (sZutat == "Eis") {
+        typ = new Zutatentyp(0);
+        return;
+    }
+    if (sZutat == "Limettenstuecke") {
+        typ = new Zutatentyp(1);
+        return;
+    }
+    typ = new Zutatentyp(2);
+}
+
+//
+
+//
+Zutatentyp * Dosierer::getTyp() {
+    return typ;
+}
