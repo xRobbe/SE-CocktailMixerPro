@@ -17,7 +17,6 @@ VerfRezeptbuch::VerfRezeptbuch(std::vector<Dosierer*> dosierer) {
     int exists = 0;
     for (int i = getAnzahlRezepte() - 1; i >= 0; --i) {
         for (int j = 0; j < getRezept(i)->getAnzahlRezeptschritte(); ++j) {
-            cout << getRezept(i)->getAnzahlRezeptschritte() << endl;
             string zutat = getRezept(i)->getRezeptSchritt(j)->getZutat();
             if (zutat == "Mischen" || zutat == "Stampfen") {
                 exists += 1;
@@ -32,7 +31,6 @@ VerfRezeptbuch::VerfRezeptbuch(std::vector<Dosierer*> dosierer) {
             }
         }
         if (exists != getRezept(i)->getAnzahlRezeptschritte()) {
-            std::cout << getRezept(i)->getName() << std::endl;
             deleteRezept(i);
         }
         exists = 0;
