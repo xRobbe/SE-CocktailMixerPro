@@ -1,0 +1,18 @@
+
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Observer.h" 0
+//@(#) Observer.h
+
+                    
+                    
+
+//
+class Observer
+{
+	
+public:
+	//
+	virtual void update() = 0;
+	
+};
+
+      

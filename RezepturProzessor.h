@@ -4,7 +4,6 @@
 #define REZEPTURPROZESSOR_H_H
 
 
-#include "string.h"
 #include "Entleerer.h"
 #include "Mischer.h"
 #include "Stampfer.h"

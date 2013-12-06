@@ -31,3 +31,9 @@ Dosierer::Dosierer(std::string sZutat) {
 Zutatentyp * Dosierer::getTyp() {
     return typ;
 }
+
+//
+void Dosierer::update()
+{
+	
+}

@@ -14,8 +14,113 @@
                      
                      
 
+                    
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Observer.h" 0
+//@(#) Observer.h
+
+                    
+                    
+
+//
+class Observer
+{
+	
+public:
+	//
+	virtual void update() = 0;
+	
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Entleerer.h" 9
+                 
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Waage.h" 0
+//@(#) Waage.h
+
+                 
+                 
+
+                   
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Subject.h" 0
+//@(#) Subject.h
+
+                   
+                   
+
+                    
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Observer.h" 0
+//@(#) Observer.h
+
+                    
+                    
+
+  
+              
+ 
+	
+       
+	  
+	                          
+	
+  
+
+      
+
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Subject.h" 9
+                
+//
+class Subject
+{
+	
+public:
+	//
+	void attach(Observer * observer);
+	//
+	void detach(Observer * observer);
+	//
+	void notify();
+	
+private:
+	//
+	std::vector<Observer *> observers;
+	
+	
+
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Waage.h" 9
+//Wiegt den Inhalt der Mischschüssel
+class Waage: public Subject
+{
+	
+public:
+	//
+	long int getDeltaGewich();
+	//
+	long int getGewicht();
+	//
+	void setGewicht(long int gewicht);
+	//
+	Waage();
+	
+private:
+	//
+	long int iGewicht;
+	
+	//
+	long int iGewichtDelta;
+	
+	
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Entleerer.h" 10
 //Entleert den Inhalt der Mischschüssel
-class Entleerer
+class Entleerer: Observer
 {
 	
 public:
@@ -24,10 +129,17 @@ public:
 	//
 	void setOffen(bool bOffen);
 	
-private:
+
+	//
+	void update();
+	private:
 	//
 	bool bOffen;
 	
+	
+
+	//
+	Waage * waage;
 	
 };
 
@@ -68,6 +180,7 @@ private:
                     
                     
 
+
 //Stampft den Inhalt der Mischschüssel
 class Stampfer
 {
@@ -95,29 +208,30 @@ private:
                  
                  
 
-//Wiegt den Inhalt der Mischschüssel
-class Waage
-{
+                    
+                                    
+                           
+ 
 	
-public:
-	//
-	long int getDeltaGewich();
-	//
-	long int getGewicht();
-	//
-	void setGewicht(long int gewicht);
-	//
-	Waage();
+       
+	  
+	                          
+	  
+	                      
+	  
+	                                  
+	  
+	        
 	
-private:
-	//
-	long int iGewicht;
+        
+	  
+	                  
 	
-	//
-	long int iGewichtDelta;
+	  
+	                       
 	
 	
-};
+  
 
       
 
@@ -266,6 +380,61 @@ class Rezeptbuch
                     
 
 
+                    
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Observer.h" 0
+//@(#) Observer.h
+
+                    
+                    
+
+  
+              
+ 
+	
+       
+	  
+	                          
+	
+  
+
+      
+
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Dosierer.h" 10
+                 
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Waage.h" 0
+//@(#) Waage.h
+
+                 
+                 
+
+                    
+                                    
+                           
+ 
+	
+       
+	  
+	                          
+	  
+	                      
+	  
+	                                  
+	  
+	        
+	
+        
+	  
+	                  
+	
+	  
+	                       
+	
+	
+  
+
+      
+
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Dosierer.h" 11
                   
                 
                       
@@ -305,9 +474,9 @@ private:
 
       
 
-#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Dosierer.h" 12
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Dosierer.h" 14
 //Dosiert die Menge einer Zutat
-class Dosierer
+class Dosierer: public Observer
 {
 	
 public:
@@ -318,13 +487,20 @@ public:
 	//
 	Zutatentyp * getTyp();
 	
-private:
+
+	//
+	void update();
+	private:
 	//
 	std::string sInhalt;
 	
 	//
 	Zutatentyp * typ;
 	
+	
+
+	//
+	Waage * waage;
 	
 };
 
@@ -356,11 +532,13 @@ public:
                     
 
 
+                     
+                  
                    
                  
                        
                                
-              
+                               
  
 	
        
@@ -371,13 +549,20 @@ public:
 	  
 	                      
 	
-        
+
+	  
+	              
+	        
 	  
 	                    
 	
 	  
 	                 
 	
+	
+
+	  
+	              
 	
   
 

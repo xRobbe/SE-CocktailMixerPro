@@ -1,11 +1,4 @@
 
-#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Waage.h" 0
-//@(#) Waage.h
-
-                 
-                 
-
-                   
 #__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Subject.h" 0
 //@(#) Subject.h
 
@@ -31,7 +24,7 @@ public:
 
       
 
-#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Subject.h" 9
+#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Subject.h" 6
                 
 //
 class Subject
@@ -51,33 +44,6 @@ private:
 	
 	
 
-};
-
-      
-
-#__FILE__ _"/home/ldapusers/isttoschu/NetBeansProjects/SE-CocktailMixerPro/Waage.h" 6
-//Wiegt den Inhalt der Mischschüssel
-class Waage: public Subject
-{
-	
-public:
-	//
-	long int getDeltaGewich();
-	//
-	long int getGewicht();
-	//
-	void setGewicht(long int gewicht);
-	//
-	Waage();
-	
-private:
-	//
-	long int iGewicht;
-	
-	//
-	long int iGewichtDelta;
-	
-	
 };
 
       

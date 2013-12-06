@@ -3,8 +3,10 @@
 #ifndef ENTLEERER_H_H
 #define ENTLEERER_H_H
 
+#include "Observer.h"
+#include "Waage.h"
 //Entleert den Inhalt der Mischschüssel
-class Entleerer
+class Entleerer: Observer
 {
 	
 public:
@@ -13,10 +15,17 @@ public:
 	//
 	void setOffen(bool bOffen);
 	
-private:
+
+	//
+	void update();
+	private:
 	//
 	bool bOffen;
 	
+	
+
+	//
+	Waage * waage;
 	
 };
 

@@ -3,6 +3,7 @@
 #ifndef STAMPFER_H_H
 #define STAMPFER_H_H
 
+
 //Stampft den Inhalt der Mischschüssel
 class Stampfer
 {

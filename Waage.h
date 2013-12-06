@@ -3,8 +3,9 @@
 #ifndef WAAGE_H_H
 #define WAAGE_H_H
 
+#include "Subject.h"
 //Wiegt den Inhalt der Mischschüssel
-class Waage
+class Waage: public Subject
 {
 	
 public:

@@ -14,3 +14,9 @@ Entleerer::Entleerer()
 	
 }
 
+
+//
+void Entleerer::update()
+{
+	
+}

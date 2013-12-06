@@ -4,11 +4,12 @@
 #define DOSIERER_H_H
 
 
-#include "string.h"
+#include "Observer.h"
+#include "Waage.h"
 #include "string"
 #include "Zutatentyp.h"
 //Dosiert die Menge einer Zutat
-class Dosierer
+class Dosierer: public Observer
 {
 	
 public:
@@ -19,13 +20,20 @@ public:
 	//
 	Zutatentyp * getTyp();
 	
-private:
+
+	//
+	void update();
+	private:
 	//
 	std::string sInhalt;
 	
 	//
 	Zutatentyp * typ;
 	
+	
+
+	//
+	Waage * waage;
 	
 };
 
