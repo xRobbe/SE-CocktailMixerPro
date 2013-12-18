@@ -30,6 +30,8 @@ class RezepturProzessor
 	VerfRezeptbuch * vrBuch;
 	//
 	Waage * waage;
+        
+        long int iSuchDosierer;
 public:
 	//
 	RezepturProzessor();
@@ -37,6 +39,10 @@ public:
 	void createDosierer(std::string fileName);
     //
 	void debug();
+        
+        void printCocktail();
+        
+        void start(int iEingabe);
 };
 
 #endif

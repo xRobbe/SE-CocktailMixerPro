@@ -60,3 +60,29 @@ void RezepturProzessor::debug() {
     //        std::cout << std::endl;
     //    }
 }
+
+void RezepturProzessor::printCocktail() {
+    for (int i = 0; i < vrBuch->getAnzahlRezepte(); i++) {
+        Rezept* r = vrBuch->getRezept(i);
+        cout << i << ". " << r->getName() << endl;
+        }
+}
+
+void RezepturProzessor::start(int iEingabe) {
+   for(int i = 0; i <= vrBuch->getRezept(iEingabe)->getAnzahlRezeptschritte(); i++){
+        string r = vrBuch->getRezept(iEingabe)->getRezeptSchritt(i)->getZutat();
+        cout << r << endl;
+        iSuchDosierer = 0;
+        if(r == "Stampfen")
+            stampfer->setAktiv(true);
+        else{
+            if(r == "Mischen")
+                mischer->setAktiv(true);
+            else{
+                while(dosierer.at(iSuchDosierer)->getInhalt() != r)
+                    iSuchDosierer += 1;
+                dosierer.at(iSuchDosierer)->mischen(vrBuch->getRezept(iEingabe)->getRezeptSchritt(i)->getMenge());
+            }
+        }
+    }
+}

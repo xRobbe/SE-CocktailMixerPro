@@ -11,13 +11,13 @@ long int Waage::getDeltaGewich()
 //
 void Waage::setGewicht(long int gewicht)
 {
-	
+    notify(iGewicht);
 }
 
 //
 long int Waage::getGewicht()
 {
-	return 0;
+	return iGewicht;        //debug
 }
 
 //

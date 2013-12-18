@@ -5,6 +5,7 @@
 
 #include "Observer.h"
 #include "vector"
+#include "algorithm"
 //
 class Subject
 {
@@ -15,7 +16,7 @@ public:
 	//
 	void detach(Observer * observer);
 	//
-	void notify();
+	void notify(long int iGewicht);
 	
 private:
 	//

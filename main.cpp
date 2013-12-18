@@ -12,12 +12,16 @@ using namespace std;
 
 int main() {
     try{
-    RezepturProzessor rp = RezepturProzessor();
-    cout << "***********************************" << endl;
-    rp.debug();
-    
+        RezepturProzessor rp = RezepturProzessor();
+        int iEingabe = 0;
+        //rp.debug();
+        cout << "Willkommen beim Cocktailmischer" << endl;
+        cout << "Bitte waehlen Sie ein Cocktail aus\n" << endl;
+        rp.printCocktail();
+        cin >> iEingabe;
+        rp.start(iEingabe);
 
-    return 0;
+        return 0;
     } catch (exception e) {
         std::cerr << e.what() << std::endl;
         return 1;

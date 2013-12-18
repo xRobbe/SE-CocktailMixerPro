@@ -13,6 +13,7 @@ std::string Dosierer::getInhalt() {
 
 //
 Dosierer::Dosierer(std::string sZutat) {
+    iGewichtErreichen = 0;
     sInhalt = sZutat;
     if (sZutat == "Eis") {
         typ = new Zutatentyp(0);
@@ -33,7 +34,19 @@ Zutatentyp * Dosierer::getTyp() {
 }
 
 //
-void Dosierer::update()
+void Dosierer::update(long int iGewicht)
 {
-	
+    if(iGewicht < iGewichtErreichen){
+        //TO DO: timer
+        std::cout << waage->getGewicht() << " Gewicht enthalten"; //debug (auch waage getGewicht())
+        waage->setGewicht(typ->getMenge());
+    }
+}
+
+
+void Dosierer::mischen(int iMenge){
+    std::cout << iMenge << std::endl;
+    iGewichtErreichen = iMenge;
+    waage->attach(this);
+    waage->setGewicht(typ->getMenge());
 }

@@ -8,6 +8,7 @@
 #include "Waage.h"
 #include "string"
 #include "Zutatentyp.h"
+#include "iostream"
 //Dosiert die Menge einer Zutat
 class Dosierer: public Observer
 {
@@ -20,20 +21,23 @@ public:
 	//
 	Zutatentyp * getTyp();
 	
-
 	//
-	void update();
+        void update(long int iGewicht);
+        
+        void mischen(int iMenge);
+        
 	private:
 	//
 	std::string sInhalt;
 	
 	//
 	Zutatentyp * typ;
-	
-	
 
 	//
 	Waage * waage;
+        
+private:
+    int iGewichtErreichen;
 	
 };
 
