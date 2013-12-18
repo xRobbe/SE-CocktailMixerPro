@@ -25,7 +25,7 @@ void RezepturProzessor::createDosierer(std::string fileName) {
             if(dosierer.size() >= 10)
                 cout << "Maximum von 10 Dosierern erreicht" << endl;
             else
-                dosierer.push_back(new Dosierer(line));
+                dosierer.push_back(new Dosierer(line, waage));
         }
         in.close();
     } catch (std::exception &e) {

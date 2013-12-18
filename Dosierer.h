@@ -15,7 +15,7 @@ class Dosierer: public Observer
 	
 public:
 	//
-	Dosierer(std::string sZutat);
+	Dosierer(std::string sZutat, Waage* waage);
 	//
 	std::string getInhalt();
 	//

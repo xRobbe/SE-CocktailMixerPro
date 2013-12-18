@@ -11,7 +11,7 @@ class Entleerer: Observer
 	
 public:
 	//
-	Entleerer();
+	Entleerer(Waage* waage);
 	//
 	void setOffen(bool bOffen);
 	

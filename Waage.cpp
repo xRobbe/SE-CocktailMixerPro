@@ -23,6 +23,6 @@ long int Waage::getGewicht()
 //
 Waage::Waage()
 {
-	
+    
 }
 

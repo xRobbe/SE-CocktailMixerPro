@@ -9,9 +9,9 @@ void Entleerer::setOffen(bool bOffen)
 }
 
 //
-Entleerer::Entleerer()
+Entleerer::Entleerer(Waage* waage)
 {
-	
+    this->waage = waage;
 }
 
 

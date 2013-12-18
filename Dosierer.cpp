@@ -12,8 +12,9 @@ std::string Dosierer::getInhalt() {
 //
 
 //
-Dosierer::Dosierer(std::string sZutat) {
+Dosierer::Dosierer(std::string sZutat, Waage* waage) {
     iGewichtErreichen = 0;
+    this->waage = waage;
     sInhalt = sZutat;
     if (sZutat == "Eis") {
         typ = new Zutatentyp(0);
