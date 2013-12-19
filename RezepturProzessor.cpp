@@ -9,7 +9,16 @@
 RezepturProzessor::RezepturProzessor() {
     createDosierer("zutaten.txt");
     vrBuch = new VerfRezeptbuch(dosierer);
-
+        //
+    waage = new Waage ();
+        //
+    entleerer = new Entleerer (waage);
+	//
+    mischer = new Mischer ();
+	//
+    stampfer = new Stampfer ();
+	//
+    
 }
 
 //

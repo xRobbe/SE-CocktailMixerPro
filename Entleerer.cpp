@@ -16,7 +16,7 @@ Entleerer::Entleerer(Waage* waage)
 
 
 //
-void Entleerer::update()
+void Entleerer::update(long int iGewicht)
 {
     
 }

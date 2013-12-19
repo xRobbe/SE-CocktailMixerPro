@@ -17,7 +17,7 @@ public:
 	
 
 	//
-	void update();
+	void update(long int iGewicht);
 	private:
 	//
 	bool bOffen;
