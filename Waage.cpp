@@ -5,24 +5,34 @@
 //
 long int Waage::getDeltaGewich()
 {
-	return 0;
+	return iGewichtDelta;
 }
 
-//
-void Waage::setGewicht(long int gewicht)
+void Waage::setDeltaGewicht(long int iGewichtDelta)
 {
-    notify(iGewicht);
+    this->iGewichtDelta = iGewichtDelta;
+}
+
+void Waage::updateDeltaGewicht(long int iGewichtDazu){
+    this->iGewichtDelta = iGewichtDazu;
+}
+//
+void Waage::setGewicht(long int iMenge)
+{
+    iGewicht = iGewicht + iMenge;
+    iGewichtDelta = iGewichtDelta + iMenge;
+    notify(iGewichtDelta);
 }
 
 //
 long int Waage::getGewicht()
 {
-	return iGewicht;        //debug
+	return iGewicht;
 }
 
 //
 Waage::Waage()
 {
-    
+    iGewicht = 0;
 }
 

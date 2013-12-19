@@ -19,6 +19,7 @@ int main() {
         cout << "Bitte waehlen Sie ein Cocktail aus\n" << endl;
         rp.printCocktail();
         cin >> iEingabe;
+        cout << "\nMischen startet\n" << "-----------------------------\n"<< endl;
         rp.start(iEingabe);
 
         return 0;

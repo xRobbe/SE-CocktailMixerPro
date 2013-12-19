@@ -16,7 +16,7 @@ void Subject::notify(long int iGewicht)
 {
     for(std::vector<Observer *>::const_iterator iter = observers.begin(); iter != observers.end(); ++iter)
     {
-        if(*iter != 0)
+        if(iter < observers.end())
         {
             (*iter)->update(iGewicht);
         }
