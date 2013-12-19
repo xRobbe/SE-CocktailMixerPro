@@ -3,6 +3,8 @@
 #ifndef STAMPFER_H_H
 #define STAMPFER_H_H
 
+#include "iostream"
+#include "ctime"
 
 //Stampft den Inhalt der Mischschüssel
 class Stampfer
@@ -10,13 +12,13 @@ class Stampfer
 	
 public:
 	//
-	void setAktiv(bool bAktiv);
-	//
 	Stampfer();
+        
+        void stampfen(long int iSekungen);
+        
+        void msleep ( long milliseconds );
 	
 private:
-	//
-	bool bAktiv;
 	
 	
 };

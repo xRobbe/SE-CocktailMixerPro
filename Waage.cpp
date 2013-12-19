@@ -30,6 +30,11 @@ long int Waage::getGewicht()
 	return iGewicht;
 }
 
+void Waage::setoffen(){
+    iGewicht = iGewicht - 25;
+    notify(iGewicht);
+}
+
 //
 Waage::Waage()
 {

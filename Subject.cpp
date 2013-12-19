@@ -9,18 +9,18 @@ void Subject::attach(Observer* observer){
 }
 
 void Subject::detach(Observer* observer){
-    observers.erase(std::remove(observers.begin(), observers.end(), observer), observers.end());
+    observers.clear();
 }
 
 void Subject::notify(long int iGewicht)
 {
-    for(std::vector<Observer *>::const_iterator iter = observers.begin(); iter != observers.end(); ++iter)
+    std::vector<Observer *>::const_iterator iter = observers.begin();
+    
+    if(iter < observers.end())
     {
-        if(iter < observers.end())
-        {
-            (*iter)->update(iGewicht);
-        }
+        (*iter)->update(iGewicht);
     }
+    
 }
 
 

@@ -17,6 +17,7 @@ public:
 	long int getGewicht();
 	//
 	void setGewicht(long int iMenge);
+        void setoffen();
 	//
 	Waage();
 	

@@ -79,15 +79,15 @@ void RezepturProzessor::printCocktail() {
 }
 
 void RezepturProzessor::start(int iEingabe) {
-   for(int i = 0; i <= vrBuch->getRezept(iEingabe)->getAnzahlRezeptschritte(); i++){
+   for(int i = 0; i <= vrBuch->getRezept(iEingabe)->getAnzahlRezeptschritte(); ++i){
         string r = vrBuch->getRezept(iEingabe)->getRezeptSchritt(i)->getZutat();
         cout << r << endl;
         iSuchDosierer = 0;
         if(r == "Stampfen")
-            stampfer->setAktiv(true);
+            stampfer->stampfen(vrBuch->getRezept(iEingabe)->getRezeptSchritt(i)->getMenge());
         else{
             if(r == "Mischen")
-                mischer->setAktiv(true);
+                mischer->mischen(vrBuch->getRezept(iEingabe)->getRezeptSchritt(i)->getMenge());
             else{
                 while(dosierer.at(iSuchDosierer)->getInhalt() != r)
                     iSuchDosierer += 1;
@@ -95,4 +95,5 @@ void RezepturProzessor::start(int iEingabe) {
             }
         }
     }
+   entleerer->entleeren();
 }

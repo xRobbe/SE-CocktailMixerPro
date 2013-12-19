@@ -26,6 +26,8 @@ public:
         
         void mischen(int iMenge);
         
+        void msleep ( long milliseconds );
+        
 	private:
 	//
 	std::string sInhalt;

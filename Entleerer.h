@@ -5,6 +5,7 @@
 
 #include "Observer.h"
 #include "Waage.h"
+#include "iostream"
 //Entleert den Inhalt der Mischschüssel
 class Entleerer: Observer
 {
@@ -13,14 +14,15 @@ public:
 	//
 	Entleerer(Waage* waage);
 	//
-	void setOffen(bool bOffen);
+	void entleeren();
 	
+        void msleep ( long milliseconds );
 
 	//
 	void update(long int iGewicht);
 	private:
 	//
-	bool bOffen;
+
 	
 	
 
