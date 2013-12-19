@@ -16,7 +16,7 @@ public:
 	//
 	void detach(Observer * observer);
 	//
-	void notify(long int iGewicht);
+	void notify(double iGewicht);
 	
 private:
 	//

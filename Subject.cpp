@@ -12,7 +12,7 @@ void Subject::detach(Observer* observer){
     observers.clear();
 }
 
-void Subject::notify(long int iGewicht)
+void Subject::notify(double iGewicht)
 {
     std::vector<Observer *>::const_iterator iter = observers.begin();
     

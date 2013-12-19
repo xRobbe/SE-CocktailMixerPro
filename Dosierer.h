@@ -22,9 +22,9 @@ public:
 	Zutatentyp * getTyp();
 	
 	//
-        void update(long int iGewicht);
+        void update(double iGewicht);
         
-        void mischen(int iMenge);
+        void mischen(double iMenge, bool bTurbo);
         
         void msleep ( long milliseconds );
         
@@ -40,6 +40,8 @@ public:
         
 private:
     int iGewichtErreichen;
+    bool bTurbo;
+    int iRunde;
 	
 };
 

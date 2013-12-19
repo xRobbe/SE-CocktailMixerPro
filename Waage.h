@@ -10,23 +10,25 @@ class Waage: public Subject
 	
 public:
 	//
-	long int getDeltaGewich();
-        void setDeltaGewicht(long int iGewichtDelta);
-        void updateDeltaGewicht(long int iGewichtDazu);
+	double getDeltaGewich();
+        void setDeltaGewicht(double iGewichtDelta);
+        void updateDeltaGewicht(double iGewichtDazu);
 	//
-	long int getGewicht();
+	double getGewicht();
 	//
-	void setGewicht(long int iMenge);
+	void setGewicht(double iMenge);
         void setoffen();
+        
+        void setGrundgewicht();
 	//
 	Waage();
 	
 private:
 	//
-	long int iGewicht;
+	double iGewicht;
 	
 	//
-	long int iGewichtDelta;
+	double iGewichtDelta;
         
         
 };

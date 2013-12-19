@@ -14,12 +14,12 @@ public:
 	//
 	Stampfer();
         
-        void stampfen(long int iSekungen);
+        void stampfen(long int iSekungen, bool bTurbo);
         
         void msleep ( long milliseconds );
 	
 private:
-	
+    bool bTurbo;
 	
 };
 

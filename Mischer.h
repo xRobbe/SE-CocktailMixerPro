@@ -14,12 +14,12 @@ public:
 	//
 	Mischer();
 	//
-	void mischen(long int iSekungen);
+	void mischen(long int iSekungen, bool bTurbo);
         
         void msleep ( long milliseconds );
 	
 private:
-	
+    bool bTurbo;
 	
 };
 

@@ -3,21 +3,21 @@
 
 #include "Waage.h"
 //
-long int Waage::getDeltaGewich()
+double Waage::getDeltaGewich()
 {
 	return iGewichtDelta;
 }
 
-void Waage::setDeltaGewicht(long int iGewichtDelta)
+void Waage::setDeltaGewicht(double iGewichtDelta)
 {
     this->iGewichtDelta = iGewichtDelta;
 }
 
-void Waage::updateDeltaGewicht(long int iGewichtDazu){
+void Waage::updateDeltaGewicht(double iGewichtDazu){
     this->iGewichtDelta = iGewichtDazu;
 }
 //
-void Waage::setGewicht(long int iMenge)
+void Waage::setGewicht(double iMenge)
 {
     iGewicht = iGewicht + iMenge;
     iGewichtDelta = iGewichtDelta + iMenge;
@@ -25,7 +25,7 @@ void Waage::setGewicht(long int iMenge)
 }
 
 //
-long int Waage::getGewicht()
+double Waage::getGewicht()
 {
 	return iGewicht;
 }
@@ -33,6 +33,11 @@ long int Waage::getGewicht()
 void Waage::setoffen(){
     iGewicht = iGewicht - 25;
     notify(iGewicht);
+}
+
+void Waage::setGrundgewicht(){
+    iGewicht = 0;
+    iGewichtDelta = 0;
 }
 
 //

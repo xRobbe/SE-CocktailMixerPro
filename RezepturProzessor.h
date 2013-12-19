@@ -32,6 +32,8 @@ class RezepturProzessor
 	Waage * waage;
         
         long int iSuchDosierer;
+        
+        bool bTurbo;
 public:
 	//
 	RezepturProzessor();
@@ -42,7 +44,8 @@ public:
         
         void printCocktail();
         
-        void start(int iEingabe);
+        void start(int iEingabe, bool bTurbo);
+        
 };
 
 #endif

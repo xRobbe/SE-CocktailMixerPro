@@ -14,6 +14,7 @@ std::string Dosierer::getInhalt() {
 //
 Dosierer::Dosierer(std::string sZutat, Waage* waage) {
     iGewichtErreichen = 0;
+    iRunde = 0;
     this->waage = waage;
     sInhalt = sZutat;
     if (sZutat == "Eis") {
@@ -35,21 +36,28 @@ Zutatentyp * Dosierer::getTyp() {
 }
 
 //
-void Dosierer::update(long int iGewicht)
+void Dosierer::update(double iGewicht)
 {
-    
-    std::cout << "---------------\n" << "Delta Gewicht: " << waage->getDeltaGewich() << std::endl;
-    std::cout << "Gesamtgewicht: " << waage->getGewicht() << std::endl;
+    iRunde = iRunde + 1;
+    msleep(250);
+    if(iRunde == 4){
+        std::cout << "*" << std::flush;
+        iRunde = 0;
+    }
     if(iGewicht < iGewichtErreichen){
         //TO DO: timer
         waage->setGewicht(typ->getMenge());
     } else {
+        std::cout << "\nDelta Gewicht: " << waage->getDeltaGewich() << std::endl;
+        std::cout << "Gesamtgewicht: " << waage->getGewicht() << "\n--------------------" << std::endl;
+        iRunde = 0;
         waage->detach(this);
     }
 }
 
 
-void Dosierer::mischen(int iMenge){
+void Dosierer::mischen(double iMenge, bool bTurbo){
+    this->bTurbo = bTurbo;
     iGewichtErreichen = iMenge;
     waage->attach(this);
     waage->setDeltaGewicht(0);
@@ -57,9 +65,11 @@ void Dosierer::mischen(int iMenge){
 }
 
 void Dosierer::msleep ( long milliseconds ) {
-  clock_t limit;
-  clock_t now = clock();
-  limit = now + milliseconds * CLOCKS_PER_SEC /1000;
-  while ( limit > now )
-  now = clock();
+    if(bTurbo == true)
+        milliseconds = milliseconds / 10;
+    clock_t limit;
+    clock_t now = clock();
+    limit = now + milliseconds * CLOCKS_PER_SEC /1000;
+    while ( limit > now )
+    now = clock();
 }

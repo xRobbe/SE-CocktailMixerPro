@@ -14,16 +14,16 @@ public:
 	//
 	Entleerer(Waage* waage);
 	//
-	void entleeren();
+	void entleeren(bool bTurbo);
 	
         void msleep ( long milliseconds );
 
 	//
-	void update(long int iGewicht);
-	private:
+	void update(double iGewicht);
+private:
 	//
 
-	
+        bool bTurbo;
 	
 
 	//

@@ -6,7 +6,7 @@
 //
 
 //
-int Zutatentyp::getMenge() {
+double Zutatentyp::getMenge() {
     return menge;
 }
 

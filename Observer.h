@@ -9,7 +9,7 @@ class Observer
 	
 public:
 	//
-	virtual void update(long int iGewicht) = 0;
+	virtual void update(double iGewicht) = 0;
 	
 };
 

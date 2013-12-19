@@ -10,7 +10,7 @@ class Zutatentyp
 	
 public:
 	//
-	int getMenge();
+	double getMenge();
 	//
 	int getTyp();
 	//
@@ -23,7 +23,7 @@ private:
 	int zeit;
 	
 	//
-	int menge;
+	double menge;
 	
 	//
 	int typ;

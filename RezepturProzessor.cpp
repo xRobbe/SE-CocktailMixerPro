@@ -78,22 +78,22 @@ void RezepturProzessor::printCocktail() {
         }
 }
 
-void RezepturProzessor::start(int iEingabe) {
-   for(int i = 0; i <= vrBuch->getRezept(iEingabe)->getAnzahlRezeptschritte(); ++i){
+void RezepturProzessor::start(int iEingabe, bool bTurbo) {
+   for(int i = 0; i < vrBuch->getRezept(iEingabe)->getAnzahlRezeptschritte(); ++i){
         string r = vrBuch->getRezept(iEingabe)->getRezeptSchritt(i)->getZutat();
         cout << r << endl;
         iSuchDosierer = 0;
         if(r == "Stampfen")
-            stampfer->stampfen(vrBuch->getRezept(iEingabe)->getRezeptSchritt(i)->getMenge());
+            stampfer->stampfen(vrBuch->getRezept(iEingabe)->getRezeptSchritt(i)->getMenge(), bTurbo);
         else{
             if(r == "Mischen")
-                mischer->mischen(vrBuch->getRezept(iEingabe)->getRezeptSchritt(i)->getMenge());
+                mischer->mischen(vrBuch->getRezept(iEingabe)->getRezeptSchritt(i)->getMenge(), bTurbo);
             else{
                 while(dosierer.at(iSuchDosierer)->getInhalt() != r)
                     iSuchDosierer += 1;
-                dosierer.at(iSuchDosierer)->mischen(vrBuch->getRezept(iEingabe)->getRezeptSchritt(i)->getMenge());
+                dosierer.at(iSuchDosierer)->mischen(vrBuch->getRezept(iEingabe)->getRezeptSchritt(i)->getMenge(), bTurbo);
             }
         }
     }
-   entleerer->entleeren();
+   entleerer->entleeren(bTurbo);
 }
