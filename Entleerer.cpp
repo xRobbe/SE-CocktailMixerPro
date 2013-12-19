@@ -18,5 +18,5 @@ Entleerer::Entleerer(Waage* waage)
 //
 void Entleerer::update()
 {
-	
+    
 }
