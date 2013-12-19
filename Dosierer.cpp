@@ -48,8 +48,9 @@ void Dosierer::update(double iGewicht)
         //TO DO: timer
         waage->setGewicht(typ->getMenge());
     } else {
+        std::cout << "\n----- Dosierer wird geschlossen -----" << std::endl;
         std::cout << "\nDelta Gewicht: " << waage->getDeltaGewich() << std::endl;
-        std::cout << "Gesamtgewicht: " << waage->getGewicht() << "\n--------------------" << std::endl;
+        std::cout << "Gesamtgewicht: " << waage->getGewicht() << "\n____________________\n\n" << std::endl;
         iRunde = 0;
         waage->detach(this);
     }
@@ -61,6 +62,7 @@ void Dosierer::mischen(double iMenge, bool bTurbo){
     iGewichtErreichen = iMenge;
     waage->attach(this);
     waage->setDeltaGewicht(0);
+    std::cout << "----- Dosierer wird geoeffnet -----" << std::endl;
     waage->setGewicht(typ->getMenge());
 }
 

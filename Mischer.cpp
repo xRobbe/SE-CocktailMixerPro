@@ -11,13 +11,14 @@ Mischer::Mischer()
 
 void Mischer::mischen(long int iSekunden, bool bTurbo){
     this->bTurbo = bTurbo;
-    std::cout << "Mischen beginnt" << std::endl;
+    std::cout << "----- Mischen beginnt -----" << std::endl;
     for(int i = 0; i < iSekunden; i++){
         msleep(1000);
         std::cout << "*" << std::flush;
     }
     std::cout << std::endl;
-    std::cout << "Mischen beendet" << std::endl;
+    std::cout << "----- Mischen beendet -----" << std::endl;
+    std::cout << "____________________\n\n" << std::endl;
 }
 
 void Mischer::msleep ( long milliseconds ) {

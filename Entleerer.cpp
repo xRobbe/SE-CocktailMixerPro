@@ -6,7 +6,7 @@
 void Entleerer::entleeren(bool bTurbo)
 {
     this->bTurbo = bTurbo;
-    std::cout << "Behaelter wird geleert\n";
+    std::cout << "----- Behaelter wird geoeffnet ------\n";
     waage->attach(this);
     waage->setoffen();
 }
@@ -25,6 +25,8 @@ void Entleerer::update(double iGewicht)
     if(iGewicht <= 0){
         waage->setGrundgewicht();
         std::cout << "Gesamtgewicht: " << waage->getGewicht() << std::endl;
+        std::cout << "----- Behaelter wird geschlossen ------" << std::endl;
+        std::cout << "____________________\n\n" << std::endl;
         waage->detach(this);
     } else {
         std::cout << "Gesamtgewicht: " << waage->getGewicht() << std::endl;
