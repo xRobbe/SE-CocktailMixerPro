@@ -12,7 +12,7 @@ std::string Dosierer::getInhalt() {
 //
 
 //
-Dosierer::Dosierer(std::string sZutat, Waage* waage) {
+Dosierer::Dosierer(std::string& sZutat, Waage* waage) {
     iGewichtErreichen = 0;
     iRunde = 0;
     this->waage = waage;
@@ -40,11 +40,11 @@ void Dosierer::update(double iGewicht)
 {
     iRunde = iRunde + 1;
     msleep(typ->getZeit());
-    if((iRunde == 4) && (typ->getZeit() <= 250)){
+    if((iRunde == 4) && (typ->getTyp() == 2)){
         std::cout << "*" << std::flush;
         iRunde = 0;
     }
-    if(typ->getZeit() > 250)
+    if(typ->getTyp() == 0 || typ->getTyp() == 1)
         std::cout << "*" << std::flush;
     if(iGewicht < iGewichtErreichen){
         //TO DO: timer
