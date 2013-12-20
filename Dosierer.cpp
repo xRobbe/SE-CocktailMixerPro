@@ -39,11 +39,13 @@ Zutatentyp * Dosierer::getTyp() {
 void Dosierer::update(double iGewicht)
 {
     iRunde = iRunde + 1;
-    msleep(250);
-    if(iRunde == 4){
+    msleep(typ->getZeit());
+    if((iRunde == 4) && (typ->getZeit() <= 250)){
         std::cout << "*" << std::flush;
         iRunde = 0;
     }
+    if(typ->getZeit() > 250)
+        std::cout << "*" << std::flush;
     if(iGewicht < iGewichtErreichen){
         //TO DO: timer
         waage->setGewicht(typ->getMenge());
