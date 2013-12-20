@@ -42,7 +42,7 @@ private:
     int iGewichtErreichen;
     bool bTurbo;
     int iRunde;
-	
+    bool bOffen;
 };
 
 #endif
