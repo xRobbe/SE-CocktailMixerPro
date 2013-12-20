@@ -21,6 +21,7 @@ int Zutatentyp::getTyp() {
 
 //
 Zutatentyp::Zutatentyp(int typ) {
+    this->typ = typ;
     switch (typ) {
             //Eis
         case 0:
