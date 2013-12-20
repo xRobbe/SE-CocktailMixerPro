@@ -4,6 +4,7 @@
 #define DOSIERER_H_H
 
 
+#include "string.h"
 #include "Observer.h"
 #include "Waage.h"
 #include "string"
@@ -15,18 +16,20 @@ class Dosierer: public Observer
 	
 public:
 	//
-	Dosierer(std::string& sZutat, Waage* waage);
+	Dosierer(std::string & sZutat, Waage * waage);
 	//
 	std::string getInhalt();
 	//
 	Zutatentyp * getTyp();
 	
 	//
-        void update(double iGewicht);
+	void update(double iGewicht);
         
-        void mischen(double iMenge, bool bTurbo);
+        //
+	void mischen(double iMenge, bool bTurbo);
         
-        void msleep ( long milliseconds );
+        //
+	void msleep(long milliseconds);
         
 	private:
 	//
@@ -38,11 +41,14 @@ public:
 	//
 	Waage * waage;
         
-private:
-    int iGewichtErreichen;
-    bool bTurbo;
-    int iRunde;
-    bool bOffen;
+//
+	int iGewichtErreichen;
+    //
+	bool bTurbo;
+    //
+	int iRunde;
+    //
+	bool bOffen;
 };
 
 #endif

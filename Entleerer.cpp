@@ -12,7 +12,7 @@ void Entleerer::entleeren(bool bTurbo)
 }
 
 //
-Entleerer::Entleerer(Waage* waage)
+Entleerer::Entleerer(Waage * waage)
 {
     this->waage = waage;
 }
@@ -36,7 +36,8 @@ void Entleerer::update(double iGewicht)
     }
 }
 
-void Entleerer::msleep ( long milliseconds ) {
+//
+void Entleerer::msleep(long milliseconds) {
     if(bTurbo == true)
         milliseconds = milliseconds / 10;
     clock_t limit;

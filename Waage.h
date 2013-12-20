@@ -11,15 +11,19 @@ class Waage: public Subject
 public:
 	//
 	double getDeltaGewich();
-        void setDeltaGewicht(double iGewichtDelta);
-        void updateDeltaGewicht(double iGewichtDazu);
+        //
+	void setDeltaGewicht(double iGewichtDelta);
+        //
+	void updateDeltaGewicht(double iGewichtDazu);
 	//
 	double getGewicht();
 	//
 	void setGewicht(double iMenge);
-        void setoffen();
+        //
+	void setoffen();
         
-        void setGrundgewicht();
+        //
+	void setGrundgewicht();
 	//
 	Waage();
 	

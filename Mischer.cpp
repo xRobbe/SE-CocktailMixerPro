@@ -9,6 +9,7 @@ Mischer::Mischer()
 	
 }
 
+//
 void Mischer::mischen(long int iSekunden, bool bTurbo){
     this->bTurbo = bTurbo;
     std::cout << "----- Mischen beginnt -----" << std::endl;
@@ -21,7 +22,8 @@ void Mischer::mischen(long int iSekunden, bool bTurbo){
     std::cout << "____________________\n\n" << std::endl;
 }
 
-void Mischer::msleep ( long milliseconds ) {
+//
+void Mischer::msleep(long milliseconds) {
     if(bTurbo == true)
         milliseconds = milliseconds / 10;
     clock_t limit;

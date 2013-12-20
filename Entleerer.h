@@ -12,18 +12,18 @@ class Entleerer: Observer
 	
 public:
 	//
-	Entleerer(Waage* waage);
+	Entleerer(Waage * waage);
 	//
 	void entleeren(bool bTurbo);
 	
-        void msleep ( long milliseconds );
+        //
+	void msleep(long milliseconds);
 
 	//
 	void update(double iGewicht);
 private:
 	//
-
-        bool bTurbo;
+	bool bTurbo;
 	
 
 	//

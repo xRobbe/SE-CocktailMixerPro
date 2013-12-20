@@ -71,6 +71,7 @@ void RezepturProzessor::debug() {
     //    }
 }
 
+//
 void RezepturProzessor::printCocktail() {
     for (int i = 0; i < vrBuch->getAnzahlRezepte(); i++) {
         Rezept* r = vrBuch->getRezept(i);
@@ -78,6 +79,7 @@ void RezepturProzessor::printCocktail() {
         }
 }
 
+//
 void RezepturProzessor::start(int iEingabe, bool bTurbo) {
    for(int i = 0; i < vrBuch->getRezept(iEingabe)->getAnzahlRezeptschritte(); ++i){
         string r = vrBuch->getRezept(iEingabe)->getRezeptSchritt(i)->getZutat();

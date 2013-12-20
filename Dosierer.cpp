@@ -6,6 +6,7 @@
 
 //
 
+//
 std::string Dosierer::getInhalt() {
     return sInhalt;
 }
@@ -14,7 +15,8 @@ std::string Dosierer::getInhalt() {
 
 //
 
-Dosierer::Dosierer(std::string& sZutat, Waage* waage) {
+//
+Dosierer::Dosierer(std::string & sZutat, Waage * waage) {
     iGewichtErreichen = 0;
     iRunde = 0;
     bOffen = false;
@@ -35,12 +37,14 @@ Dosierer::Dosierer(std::string& sZutat, Waage* waage) {
 
 //
 
+//
 Zutatentyp * Dosierer::getTyp() {
     return typ;
 }
 
 //
 
+//
 void Dosierer::update(double iGewicht) {
 
     if (waage->getDeltaGewich() >= iGewichtErreichen) {
@@ -51,6 +55,7 @@ void Dosierer::update(double iGewicht) {
     }
 }
 
+//
 void Dosierer::mischen(double iMenge, bool bTurbo) {
     this->bTurbo = bTurbo;
     iGewichtErreichen = iMenge;
@@ -73,6 +78,7 @@ void Dosierer::mischen(double iMenge, bool bTurbo) {
     waage->detach(this);
 }
 
+//
 void Dosierer::msleep(long milliseconds) {
     if (bTurbo == true)
         milliseconds = milliseconds / 10;

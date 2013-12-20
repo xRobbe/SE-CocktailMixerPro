@@ -4,6 +4,7 @@
 #define REZEPTURPROZESSOR_H_H
 
 
+#include "string.h"
 #include "Entleerer.h"
 #include "Mischer.h"
 #include "Stampfer.h"
@@ -31,9 +32,11 @@ class RezepturProzessor
 	//
 	Waage * waage;
         
-        long int iSuchDosierer;
+        //
+	long int iSuchDosierer;
         
-        bool bTurbo;
+        //
+	bool bTurbo;
 public:
 	//
 	RezepturProzessor();
@@ -42,9 +45,11 @@ public:
     //
 	void debug();
         
-        void printCocktail();
+        //
+	void printCocktail();
         
-        void start(int iEingabe, bool bTurbo);
+        //
+	void start(int iEingabe, bool bTurbo);
         
 };
 
