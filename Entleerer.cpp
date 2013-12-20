@@ -27,6 +27,8 @@ void Entleerer::update(double iGewicht)
         std::cout << "Gesamtgewicht: " << waage->getGewicht() << std::endl;
         std::cout << "----- Behaelter wird geschlossen ------" << std::endl;
         std::cout << "____________________\n\n" << std::endl;
+        std::cout << "----- Reinigung beginnt -----\n" << "----- Reinigung abgeschlossen -----" << std::endl;
+        std::cout << "____________________\n\n" << std::endl;
         waage->detach(this);
     } else {
         std::cout << "Gesamtgewicht: " << waage->getGewicht() << std::endl;

@@ -12,7 +12,7 @@ using namespace std;
 
 
 int main() {
-    bool bTurbo = false;
+    bool bTurbo = true;
     try{
         RezepturProzessor rp = RezepturProzessor();
         cout << "Willkommen beim Cocktailmischer" << endl;
@@ -20,7 +20,7 @@ int main() {
             int iEingabe = 0;
             //rp.debug();
             cout << "Bitte waehlen Sie ein Cocktail aus\n" << endl;
-            cout << "100. Turbomodus an/aus\n404. Programm beenden\n" << endl;
+            cout << "100. Turbomodus an/aus (Standard ist an)\n404. Programm beenden\n" << endl;
             rp.printCocktail();
             cin >> iEingabe;
             if(iEingabe == 100){
